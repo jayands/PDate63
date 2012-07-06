@@ -4,6 +4,7 @@
 #
 int main( int argc, char *argv[]){
 	initscr();
+	setlocale(LC_ALL, "");
 	cbreak();
 	keypad(stdscr,TRUE); /* for function key availability; will have to test outside of Mac OS X*/
 	/*TODO: initialize everything here  */

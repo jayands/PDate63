@@ -30,18 +30,28 @@ either expressed or implied, of the FreeBSD Project.
 #ifndef __INCLUDE_H_QQtV5Sk
 #define __INCLUDE_H_QQtV5Sk
 
+
 #include <ncurses.h>
 #include <menu.h>
 #include <panels.h>
+#ifndef OK_EXIT
+#define OK_EXIT 0
+#endif
 
-#ifdef __cplusplus /* use the C++ versions */
+#if __cplusplus /* use the C++ versions */
+
 #include <cstdlib>
 #include <cstdio>
 #include <cstring>
+using namespace std;
 #else /* pure C versions */
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
 #endif /* __cplusplus */
+
+inline size_t max(size_t a, size_t b) { return (a > b) ? a : b; }
+inline size_t min(size_t a, size_t b) { return (a < b) ? a : b; }
+
 
 #endif /* __INCLUDE_H_QQtV5Sk */
